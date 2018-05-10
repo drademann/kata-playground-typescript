@@ -1,0 +1,7 @@
+# IntelliJ
+.idea/
+**/*.iml
+
+# npm
+node_modules
+package-lock.json
