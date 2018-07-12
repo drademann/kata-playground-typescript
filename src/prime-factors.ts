@@ -1,11 +1,13 @@
-export function primeFactors(number: number) {
+export function primeFactors(n: number) {
   let factors: number[] = [];
-  if (number % 2 == 0) {
-    factors = factors.concat(2);
-    number /= 2;
-  }
-  if (number > 1) {
-    factors = factors.concat(number);
+  let number = n;
+  let candidate = 2;
+  while (number > 1) {
+    while (number % candidate == 0) {
+      factors = factors.concat(candidate);
+      number /= candidate;
+    }
+    candidate += 1;
   }
   return factors;
 }

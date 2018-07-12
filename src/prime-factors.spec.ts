@@ -16,4 +16,13 @@ describe("calculating primefactors of a natural number", () => {
   it("should return [2, 2} given number 4", () => {
     expect(primeFactors(4)).to.deep.equal([2, 2]);
   });
+  it("should return [2, 3] given number 6", () => {
+    expect(primeFactors(6)).to.deep.equal([2, 3]);
+  });
+  it("should return [2, 2, 2] given number 8", () => {
+    expect(primeFactors(8)).to.deep.equal([2, 2, 2]);
+  });
+  it("should return [3, 3] given number 9", () => {
+    expect(primeFactors(9)).to.deep.equal([3, 3]);
+  });
 });
