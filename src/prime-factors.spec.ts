@@ -3,6 +3,11 @@ import { primeFactors } from "./prime-factors";
 import { expect } from "chai";
 import "mocha";
 
+/*
+ * Requirements
+ *
+ * For an integer value n the generator should return all prime factors as an ordered list.
+ */
 describe("calculating primefactors of a natural number", () => {
   it("should return an empty array given number 1", () => {
     expect(primeFactors(1)).to.be.empty;
