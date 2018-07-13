@@ -47,4 +47,13 @@ describe("calculating the sum of numbers contained in a string", () => {
   it("should return 0 given an empty string", () => {
     expect(stringCalculate("")).to.be.equal(0);
   });
+  it("should return the single number contained in a string", () => {
+    expect(stringCalculate("1")).to.be.equal(1);
+  });
+  it("should return the sum of two comma separated numbers contained in a string", () => {
+    expect(stringCalculate("1,2")).to.be.equal(3);
+  });
+  it("should return the sum of many comma separated numbers contained in a string", () => {
+    expect(stringCalculate("1,2,3,4,1000,1")).to.be.equal(1011);
+  });
 });

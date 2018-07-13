@@ -1,3 +1,6 @@
 export function stringCalculate(input: string): number {
-  return 0;
+  return input
+    .split(",")
+    .map(s => Number(s))
+    .reduce((a, n) => a + n);
 }
