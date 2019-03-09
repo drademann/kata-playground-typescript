@@ -1,7 +1,7 @@
-import { stringCalculate } from "./string-calculator";
-
 import { expect } from "chai";
 import "mocha";
+
+import { stringCalculate } from "./string-calculator";
 
 /*
  * Requirements
@@ -27,7 +27,7 @@ import "mocha";
  * Providing a negative number when calculating
  * then throws an exception "negatives not allowed" - and the negative(s) that was passed.
  *
- * Providing numbers bigger than 1000 when calculating
+ * Providing numbers greater than 1000 when calculating
  * then such numbers should be ignored in the calculation.
  *
  * ...
@@ -55,5 +55,17 @@ describe("calculating the sum of numbers contained in a string", () => {
   });
   it("should return the sum of many comma separated numbers contained in a string", () => {
     expect(stringCalculate("1,2,3,4,1000,1")).to.be.equal(1011);
+  });
+  it("should accept line delimiter as separator", () => {
+    expect(stringCalculate("1,2\n3")).to.be.equal(6);
+  });
+  it("should allow to define an additional custom delimiter", () => {
+    expect(stringCalculate("//;\n1;2")).to.be.equal(3);
+  });
+  it("should throw error given a negative number", () => {
+    expect(() => stringCalculate("1,-2,3")).to.throw(EvalError);
+  });
+  it("should ignore numbers greater than 1000", () => {
+    expect(stringCalculate("1,1000,1001,2")).to.be.equal(1003);
   });
 });
