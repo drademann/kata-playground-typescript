@@ -1,4 +1,6 @@
 # kata-playground-typescript
+[![Wallaby.js](https://img.shields.io/badge/wallaby.js-configured-green.svg)](https://wallabyjs.com)
+
 This is a project setup to quickly get started with various Coding Katas using TypeScript.
 
 Currently the following Katas are included:
