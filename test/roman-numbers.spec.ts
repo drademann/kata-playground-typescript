@@ -1,4 +1,4 @@
-import { asRomanNumber } from "./roman-numbers";
+import { asRomanNumber } from "../src/roman-numbers";
 
 import { expect } from "chai";
 import "mocha";

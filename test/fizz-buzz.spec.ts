@@ -1,4 +1,4 @@
-import { fizzBuzz } from "./fizz-buzz";
+import { fizzBuzz } from "../src/fizz-buzz";
 
 import { expect } from "chai";
 import "mocha";

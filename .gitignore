@@ -2,8 +2,9 @@
 .idea/
 **/*.iml
 
-# compiled JavaScript
-**/*.js
+# compiled sources
+src/**/*.js
+test/**/*.js
 
 # npm
 node_modules

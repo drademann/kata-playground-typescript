@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "test": "mocha -r ts-node/register src/**/*.spec.ts"
+    "test": "mocha -r ts-node/register test/**/*.spec.ts"
+  },
+  "directories": {
+    "test": "test"
   },
   "dependencies": {},
   "devDependencies": {

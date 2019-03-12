@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import "mocha";
 
-import { stringCalculate } from "./string-calculator";
+import { stringCalculate } from "../src/string-calculator";
 
 /*
  * Requirements

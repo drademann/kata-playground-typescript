@@ -1,4 +1,4 @@
-import { primeFactors } from "./prime-factors";
+import { primeFactors } from "../src/prime-factors";
 
 import { expect } from "chai";
 import "mocha";

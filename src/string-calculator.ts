@@ -34,6 +34,6 @@ class StringCalculator {
   }
 
   private delimiterRegExp() {
-    return RegExp(`[${this.delimiters.join()}]`);
+    return RegExp(`[${this.delimiters.join("")}]`);
   }
 }
