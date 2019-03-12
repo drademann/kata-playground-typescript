@@ -10,7 +10,7 @@ import "mocha";
  */
 describe("calculating primefactors of a natural number", () => {
   it("should return an empty array given number 1", () => {
-    expect(primeFactors(1)).to.be.empty;
+    expect(primeFactors(1)).to.be.of.length(0);
   });
   it("should return [2] given number 2", () => {
     expect(primeFactors(2)).to.deep.equal([2]);
