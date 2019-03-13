@@ -43,7 +43,8 @@ import { stringCalculate } from "../src/string-calculator";
  * Providing multiple delimiters with variable length when calculating
  * then the result is the sum of the numbers.
  */
-describe("calculating the sum of numbers contained in a string", () => {
+// use .only to instruct Wallaby to execute this suite only
+describe(/*.only*/ "calculating the sum of numbers contained in a string", () => {
   it("should return 0 given an empty string", () => {
     expect(stringCalculate("")).to.be.equal(0);
   });
