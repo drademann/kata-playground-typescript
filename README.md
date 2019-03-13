@@ -14,6 +14,8 @@ Currently the following Katas are included:
 
 A description with requirements for each Kata is included in each test.
 
+_Hint_: You may use Wallaby's feature of taking `.only` into account to only execute the tests of your current Kata.
+
 Remember the TDD and Kata rules:
 
 - Do one task at a time.
