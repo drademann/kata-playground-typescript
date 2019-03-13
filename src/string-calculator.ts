@@ -1,39 +1,42 @@
 export function stringCalculate(input: string): number {
-  if (doesStartWithCustomDelimiter(input)) {
+  if (input.startsWith("//")) {
+    const remainingInput = input.substring(3);
     return new StringCalculator(
-      input.substring(3),
-      ",",
-      "\n",
-      input.charAt(2)
+      remainingInput,
+      delimitersWith(customDelimiter(input))
     ).calculate();
   }
-  return new StringCalculator(input, ",", "\n").calculate();
+  return new StringCalculator(input).calculate();
 }
 
-function doesStartWithCustomDelimiter(input: string) {
-  return input.lastIndexOf("//", 0) == 0;
+function customDelimiter(input: string): string {
+  return input.charAt(2);
+}
+
+function delimitersWith(customDelimiter: string): string[] {
+  return [",", "\n", customDelimiter];
 }
 
 class StringCalculator {
   private delimiters: string[];
 
-  constructor(readonly input: string, ...delimiters: string[]) {
+  constructor(private input: string, delimiters: string[] = [",", "\n"]) {
     this.delimiters = delimiters;
   }
 
   calculate(): number {
     return this.input
-      .split(this.delimiterRegExp())
-      .map(s => Number(s))
-      .map(n => {
-        if (n < 0) throw new EvalError();
-        return n;
-      })
+      .split(RegExp(`[${this.delimiters.join("")}]`))
+      .map(this.toNumber)
       .filter(n => n <= 1000)
-      .reduce((a, n) => a + n);
+      .reduce((p, c) => p + c);
   }
 
-  private delimiterRegExp() {
-    return RegExp(`[${this.delimiters.join("")}]`);
+  private toNumber(s: string) {
+    let n = Number(s);
+    if (n < 0) {
+      throw new EvalError();
+    }
+    return n;
   }
 }
