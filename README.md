@@ -8,6 +8,7 @@ This is a project setup to quickly get started with various Coding Katas using T
 Currently the following Katas are included:
 
 - FizzBuzz
+- Morse Codes
 - Prime Factors (thanks to _Uncle Bob_ [Robert C. Martin's Prime Factor Kata](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata))
 - Roman Number Converter
 - String Calculator (thanks to [Roy Osherove](http://osherove.com/tdd-kata-1/))
