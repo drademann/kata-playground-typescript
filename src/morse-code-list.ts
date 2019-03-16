@@ -1,4 +1,4 @@
-const MorseCodes = [
+export const MorseCodes = [
   [".-", "A"],
   ["-...", "B"],
   ["-.-.", "C"],
@@ -63,11 +63,11 @@ const MorseCodes = [
 export function charToMorseCode(c: string): string {
   let morseCode = MorseCodes.find(tuple => tuple[1] === c);
   if (morseCode) return morseCode[0];
-  throw EvalError();
+  throw EvalError(`unknown character ${c}`);
 }
 
 export function morseCodeToChar(mc: string): string {
   let morseCode = MorseCodes.find(tuple => tuple[0] == mc);
   if (morseCode) return morseCode[1];
-  throw EvalError();
+  throw EvalError(`unknown morse code ${mc}`);
 }
