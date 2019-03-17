@@ -19,7 +19,7 @@ import "mocha";
  * Optional requirements e.g. to recognize punctation or to parse an incoming stream of morse codes.
  */
 
-describe.only("decoding a morse code", () => {
+describe("decoding a morse code", () => {
   it("should convert a single morse code", () => {
     expect(decode("....")).to.be.equal("H");
     expect(decode(".")).to.be.equal("E");
@@ -41,7 +41,7 @@ describe.only("decoding a morse code", () => {
 /*
  * Tests for morse code converter helper functions.
  */
-describe.only("converting characters to morse code and back", () => {
+describe("converting characters to morse code and back", () => {
   it("should convert 'A' to '.-'", () => {
     expect(charToMorseCode("A")).to.be.equal(".-");
   });
