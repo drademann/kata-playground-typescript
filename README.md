@@ -11,6 +11,7 @@ Currently the following Katas are included:
 - Morse Codes
 - Prime Factors (thanks to _Uncle Bob_ [Robert C. Martin's Prime Factor Kata](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata))
 - Roman Number Converter
+- Sort Ranking
 - String Calculator (thanks to [Roy Osherove](http://osherove.com/tdd-kata-1/))
 
 A description with requirements for each Kata is included in each test.
