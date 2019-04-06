@@ -1,43 +1,22 @@
-export function sort(players: Player[]): RankedPlayer[] {
-  function byRankedPlayers(rp1: RankedPlayer, rp2: RankedPlayer): number {
-    return rp1.compareTo(rp2);
+export function sort(players: Player[]): Rank[] {
+  players.sort((p1, p2) => p2.points - p1.points);
+  let ranks: Rank[] = [];
+  let rank = 0;
+  for (let i = 0; i < players.length; i++) {
+    rank += 1;
+    if (rank == 1 || players[i].points < players[i - 1].points) {
+      ranks.push(new Rank(players[i], rank));
+    } else {
+      ranks.push(new Rank(players[i], ranks[ranks.length - 1].rank));
+    }
   }
-
-  let rankedPlayers = players
-    .map(p => new RankedPlayer(p))
-    .sort(byRankedPlayers);
-  rankedPlayers.reduce(toApplyRank);
-  return rankedPlayers;
+  return ranks;
 }
 
 export class Player {
   constructor(readonly name: string, readonly points: number) {}
 }
 
-export class RankedPlayer extends Player {
-  rank: number = 1;
-
-  constructor(player: Player) {
-    super(player.name, player.points);
-  }
-
-  compareTo(other: RankedPlayer): number {
-    if (this.points === other.points) {
-      return this.name.localeCompare(other.name);
-    }
-    return other.points - this.points;
-  }
-}
-
-function toApplyRank(
-  rp1: RankedPlayer,
-  rp2: RankedPlayer,
-  position: number
-): RankedPlayer {
-  if (rp2.points === rp1.points) {
-    rp2.rank = rp1.rank;
-  } else {
-    rp2.rank = position + 1;
-  }
-  return rp2;
+export class Rank {
+  constructor(readonly player: Player, readonly rank: number) {}
 }
