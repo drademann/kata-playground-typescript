@@ -1,4 +1,4 @@
-import { sort, Player, Rank } from "../src/sort-ranking";
+import { Player, sort } from "../src/sort-ranking";
 
 import { expect } from "chai";
 import "mocha";
@@ -40,7 +40,7 @@ describe("applying rank", () => {
 
     let rankings = sort(players);
 
-    expect(rankings.map(r => r.rank)).to.deep.equal([1, 2, 3]);
+    expect(rankings.map(r => r.position)).to.deep.equal([1, 2, 3]);
   });
 
   it("should apply same rank to players with same points", () => {
@@ -52,7 +52,7 @@ describe("applying rank", () => {
 
     let rankings = sort(players);
 
-    expect(rankings.map(r => r.rank)).to.deep.equal([1, 2, 2]);
+    expect(rankings.map(r => r.position)).to.deep.equal([1, 2, 2]);
   });
 
   it("should skip ranks after applying same rank", () => {
@@ -66,6 +66,6 @@ describe("applying rank", () => {
     let rankings = sort(players);
 
     expect(rankings).to.be.length(4);
-    expect(rankings[3]).to.deep.equal(new Rank(new Player("Hans", 5), 4));
+    expect(rankings[3].position).to.deep.equal(4);
   });
 });
