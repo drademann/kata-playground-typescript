@@ -15,7 +15,7 @@ __Remember__:
 
 Provide the following function
 
-    add(numbers string) int
+    add(string) int
 
 ## Requirements
 
