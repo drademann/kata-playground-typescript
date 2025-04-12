@@ -10,9 +10,9 @@ Use TDD, test-driven development to invent your solution to the problem:
 
 ## Content
 
-<!-- - [Hello](hello/KATA.md) from [Coding Dojo](https://codingdojo.org/kata/Hello/) -->
-<!-- - [Anagram](anagram/KATA.md) from [Coding Dojo](https://codingdojo.org/kata/Anagram/) -->
-<!-- - [Minesweeper](minesweeper/KATA.md) from [Coding Dojo](https://codingdojo.org/kata/Minesweeper/) -->
-<!-- - [Prime Factors](primefactors/KATA.md) by Robert Martin -->
-<!-- - [Roman Numerals](roman/KATA.md) from [Coding Dojo](https://codingdojo.org/kata/RomanCalculator/) -->
-- [String Calculator](stringcalculator/KATA.md) by Roy Osherove
+<!-- - [Hello](src/hello/KATA.md) from [Coding Dojo](https://codingdojo.org/kata/Hello/) -->
+<!-- - [Anagram](src/anagram/KATA.md) from [Coding Dojo](https://codingdojo.org/kata/Anagram/) -->
+<!-- - [Minesweeper](src/minesweeper/KATA.md) from [Coding Dojo](https://codingdojo.org/kata/Minesweeper/) -->
+<!-- - [Prime Factors](src/primefactors/KATA.md) by Robert Martin -->
+<!-- - [Roman Numerals](src/roman/KATA.md) from [Coding Dojo](https://codingdojo.org/kata/RomanCalculator/) -->
+- [String Calculator](src/stringcalculator/KATA.md) by Roy Osherove
