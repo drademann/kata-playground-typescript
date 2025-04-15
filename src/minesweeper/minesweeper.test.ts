@@ -1,1 +1,1 @@
-test('minesweeper', () => {})
+test('minesweeper', () => {});

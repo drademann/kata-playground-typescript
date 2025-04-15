@@ -1,1 +1,1 @@
-test('string calculator', () => {})
+test('string calculator', () => {});

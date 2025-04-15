@@ -1,1 +1,1 @@
-test('prime factors', () => {})
+test('prime factors', () => {});

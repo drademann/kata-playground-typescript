@@ -1,1 +1,1 @@
-test('anagram', () => {})
+test('anagram', () => {});
