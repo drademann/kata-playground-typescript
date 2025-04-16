@@ -1,5 +1,7 @@
-import { add } from './example';
+import { plus } from './example';
 
-test('adds two numbers', () => {
-  expect(add(2, 3)).toBe(5);
+describe('plus should', () => {
+  test('calculate sum of two numbers', () => {
+    expect(plus(2, 3)).toBe(5);
+  });
 });
