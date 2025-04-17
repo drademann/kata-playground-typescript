@@ -1,1 +1,3 @@
-test('string calculator', () => {});
+describe('string calculator should', () => {
+  test('something', () => {});
+});

@@ -12,6 +12,7 @@ Use TDD, test-driven development to invent your solution to the problem:
 
 - [Hello](src/hello/KATA.md) from [Coding Dojo](https://codingdojo.org/kata/Hello/)
 - [Anagram](src/anagram/KATA.md) from [Coding Dojo](https://codingdojo.org/kata/Anagram/)
+- [FizzBuzz](src/fizzbuzz/KATA.md) from _The Web_
 - [Minesweeper](src/minesweeper/KATA.md) from [Coding Dojo](https://codingdojo.org/kata/Minesweeper/)
 - [Prime Factors](src/primefactors/KATA.md) by Robert Martin
 - [Roman Numerals](src/roman/KATA.md) from [Coding Dojo](https://codingdojo.org/kata/RomanCalculator/)

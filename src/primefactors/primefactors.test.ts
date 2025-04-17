@@ -1,1 +1,3 @@
-test('prime factors', () => {});
+describe('prime factors should', () => {
+  test('something', () => {});
+});
